@@ -17,7 +17,9 @@
   <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
   <script>
    $(function () {
-    const socket = io('http://localhost:3000');
+    //const socket = io('http://localhost:3000');
+    const socket = io('https://chatservicetest.azurewebsites.net');
+
     $('form').submit(function(e){
       e.preventDefault(); // prevents page reloading
       socket.emit('chat', $('#m').val());
